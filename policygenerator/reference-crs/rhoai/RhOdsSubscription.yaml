@@ -9,4 +9,4 @@ spec:
   source: redhat-operators-disconnected
   sourceNamespace: openshift-marketplace
   startingCSV: rhods-operator.3.5.3
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
