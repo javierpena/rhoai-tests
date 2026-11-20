@@ -19,7 +19,7 @@ spec:
   project: addon-policy-app-project
   source:
     path: policygenerator
-    repoURL: https://github.com/javiepena/rhoai-tests
+    repoURL: https://github.com/javierpena/rhoai-tests
     targetRevision: main
     # uncomment the below plugin if you will be adding the plugin binaries in the same repo->dir where
     # the PolicyGenerator .yaml files exist AND use the ../../hack/patch-argocd-dev.sh script to re-patch the deployment-repo-server

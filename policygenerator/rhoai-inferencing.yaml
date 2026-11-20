@@ -9,8 +9,9 @@ policyDefaults:
   placement:
     labelSelector:
       matchLabels:
-        common: "rhoai"
-        version: "5.1"
+#        common: "rhoai"
+#        version: "5.1"
+        rhoai: "enabled"
   remediationAction: "enforce"
   # This parameter ensures that the policies are applied in the order they are specified in this file.
   orderPolicies: true
