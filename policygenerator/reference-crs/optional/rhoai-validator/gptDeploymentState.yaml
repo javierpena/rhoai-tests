@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: gpt-oss-20b-predictor
   namespace: model-serving
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "10000"
 status:
   replicas: 1
   readyReplicas: 1

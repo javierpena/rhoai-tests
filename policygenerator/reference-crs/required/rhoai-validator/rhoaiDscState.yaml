@@ -2,5 +2,7 @@ apiVersion: datasciencecluster.opendatahub.io/v1
 kind: DataScienceCluster
 metadata:
   name: default-dsc
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "10000"
 status:
   phase: Ready

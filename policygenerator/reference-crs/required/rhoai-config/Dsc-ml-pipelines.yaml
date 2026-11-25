@@ -2,20 +2,23 @@ apiVersion: datasciencecluster.opendatahub.io/v1
 kind: DataScienceCluster
 metadata:
   name: default-dsc
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "10"  
 spec:
   components:
     # 1. Enable Kueue for workload scheduling
     kueue:
-      autoCreateQueues: true
+      autoCreateQueues: true    
       defaultClusterQueueName: default
       defaultLocalQueueName: default
       managementState: Unmanaged
-    # 2. Enable Trainer v2, Ray and Workbenches
+    # 2. Enable AI pipelines, Trainer v2, and Ray
+    aipipelines:
+      argoWorkflowsControllers:
+        managementState: Managed    
     ray:
       managementState: Managed
     trainingoperator:
-      managementState: Managed
-    workbenches:
       managementState: Managed
     # 3. Recommended: Enable ModelRegistry for tracking models
     modelregistry:

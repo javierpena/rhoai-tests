@@ -3,3 +3,5 @@ kind: OperatorGroup
 metadata:
   name: rhods-operator
   namespace: redhat-ods-operator
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "2"

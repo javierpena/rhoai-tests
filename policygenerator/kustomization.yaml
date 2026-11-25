@@ -5,6 +5,6 @@ resources:
 generators:
   # Uncomment the required generator depending on the use case
   # Inferencing
-  - rhoai-inferencing.yaml
+  # - rhoai-inferencing.yaml
   # Workbenches/pipelines
-  #- rhoai-workbench-pipelines.yaml
+  - rhoai-workbench-pipelines.yaml

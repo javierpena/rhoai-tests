@@ -1,14 +1,15 @@
 apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
 metadata:
+  name: gpt-oss-20b
+  namespace: model-serving
   annotations:
     openshift.io/display-name: gpt-oss-20b
     serving.kserve.io/deploymentMode: RawDeployment
+    ran.openshift.io/ztp-deploy-wave: "100"
   labels:
     networking.kserve.io/visibility: exposed
     opendatahub.io/dashboard: "true"
-  name: gpt-oss-20b
-  namespace: model-serving
 spec:
   predictor:
     automountServiceAccountToken: false

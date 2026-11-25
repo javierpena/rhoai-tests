@@ -1,25 +1,26 @@
-# This CR verifies the installation/upgrade of the Redhat ODS Operator
+# This CR verifies the installation/upgrade of the Kueue Operator
 apiVersion: operators.coreos.com/v1
 kind: Operator
 metadata:
-  name: rhods-operator.redhat-ods-operator
+  name: jobset-operator.openshift-jobset-operator
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "2"
 status:
   components:
     refs:
     - kind: Subscription
-      namespace: redhat-ods-operator 
+      namespace: openshift-jobset-operator
       conditions:
       - type: CatalogSourcesUnhealthy
         status: "False"
     - kind: InstallPlan
-      namespace: redhat-ods-operator 
+      namespace: openshift-jobset-operator
       conditions:
       - type: Installed
         status: "True"
     - kind: ClusterServiceVersion
-      namespace: redhat-ods-operator 
+      namespace: openshift-jobset-operator
       conditions:
       - type: Succeeded
         status: "True"
         reason: InstallSucceeded
-

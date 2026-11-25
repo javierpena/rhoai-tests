@@ -7,6 +7,7 @@ metadata:
     openshift.io/template-display-name: vLLM NVIDIA GPU ServingRuntime for KServe
     opendatahub.io/template-name: vllm-cuda-runtime-template
     opendatahub.io/apiProtocol: REST
+    ran.openshift.io/ztp-deploy-wave: "100"
   labels:
     opendatahub.io/dashboard: "true"
   name: vllm-cuda-runtime-model-serving
