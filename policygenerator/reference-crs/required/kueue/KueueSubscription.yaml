@@ -11,4 +11,4 @@ spec:
   source: redhat-operators-disconnected
   sourceNamespace: openshift-marketplace
   startingCSV: kueue-operator.v1.5.0
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
