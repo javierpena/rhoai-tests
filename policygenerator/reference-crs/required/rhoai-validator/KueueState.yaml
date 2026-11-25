@@ -1,0 +1,15 @@
+apiVersion: datasciencecluster.opendatahub.io/v1
+kind: DataScienceCluster
+metadata:
+  name: default-dsc
+  annotations:
+    ran.openshift.io/ztp-deploy-wave: "10"
+status:
+  conditions:
+    - type: Available
+      status: "True"
+      reason: AllReplicasReady
+    - type: Degraded
+      reason: AsExpected
+      status: "False"
+

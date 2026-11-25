@@ -14,6 +14,7 @@ spec:
       managementState: Unmanaged
     # 2. Enable AI pipelines, Trainer v2, and Ray
     aipipelines:
+      managementState: Managed
       argoWorkflowsControllers:
         managementState: Managed    
     ray:

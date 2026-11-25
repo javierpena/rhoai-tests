@@ -31,7 +31,6 @@ policies:
       patches:
       - spec:
             source: redhat-operators    
-    # FIXME need to review this one
     - path: reference-crs/required/jobset/JobSetStatus.yaml
     # Kueue operator deployment
     - path: reference-crs/required/kueue/KueueNS.yaml
@@ -40,7 +39,6 @@ policies:
       patches:
       - spec:
             source: redhat-operators    
-    # FIXME need to review this one    
     - path: reference-crs/required/kueue/KueueStatus.yaml
 - name: kueue-jobset-config-policy
   manifests:
@@ -55,4 +53,5 @@ policies:
   remediationAction: inform
   manifests:
     - path: reference-crs/required/rhoai-validator/rhoaiDscState.yaml
-    # FIXME add validator policies for Kueue and JobSet
+    - path: reference-crs/required/rhoai-validator/KueueState.yaml
+    - path: reference-crs/required/rhoai-validator/JobSetOperatorState.yaml
