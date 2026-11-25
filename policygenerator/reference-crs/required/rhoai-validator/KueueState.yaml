@@ -1,7 +1,7 @@
-apiVersion: datasciencecluster.opendatahub.io/v1
-kind: DataScienceCluster
+apiVersion: kueue.openshift.io/v1
+kind: Kueue
 metadata:
-  name: default-dsc
+  name: cluster
   annotations:
     ran.openshift.io/ztp-deploy-wave: "10"
 status:
